@@ -2,120 +2,146 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Aviso Oficial de Ganador</title>
+  <title>TIKTOK</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #000000;
+      background-color: #000;
       margin: 0;
       padding: 40px;
       color: #fff;
     }
+
     .container {
-      max-width: 600px;
+      max-width: 800px; /* MÁS ANCHO */
       background-color: #121212;
       margin: auto;
-      padding: 30px 40px;
+      padding: 50px 60px; /* MÁS ESPACIO */
       border: 2px solid #25F4EE;
-      border-radius: 8px;
-      box-shadow: 0 0 20px #EE1D52;
-    }
-    h1 {
-      color: #25F4EE;
+      border-radius: 10px;
+      box-shadow: 0 0 30px #EE1D52;
       text-align: center;
-      margin-bottom: 10px;
-      font-weight: 700;
-      font-size: 1.8rem;
+      overflow: hidden;
     }
+
+    .tiktok-logo {
+      position: relative;
+      display: inline-block;
+      font-weight: 900;
+      font-size: 4rem; /* MÁS GRANDE */
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 1;
+    }
+
+    .tiktok-logo span {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .tiktok-logo .cyan {
+      color: #25F4EE;
+      animation: shift 1s infinite alternate;
+    }
+
+    .tiktok-logo .pink {
+      color: #EE1D52;
+      left: 3px;
+      top: 3px;
+      animation: shift 1s infinite alternate-reverse;
+    }
+
+    @keyframes shift {
+      0% { transform: translate(0, 0); }
+      100% { transform: translate(1px, 1px); }
+    }
+
     .info {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 30px;
+      font-size: 1.2rem;
+      line-height: 1.7;
+      margin: 35px 0;
       color: #ddd;
+      text-align: left;
     }
+
     .highlight {
-      font-weight: 600;
+      font-weight: 700;
       color: #EE1D52;
     }
+
     .whatsapp-btn {
       display: block;
       width: 100%;
       background-color: #25D366;
       color: white;
       border: none;
-      padding: 15px;
-      font-size: 1.1rem;
-      border-radius: 5px;
+      padding: 18px;
+      font-size: 1.2rem;
+      border-radius: 6px;
       cursor: pointer;
       transition: background-color 0.3s ease;
-      margin-top: 20px;
+      margin-top: 25px;
       font-weight: 700;
       letter-spacing: 1px;
       text-align: center;
       text-decoration: none;
     }
+
     .whatsapp-btn:hover {
       background-color: #1ebe5d;
     }
-    #resultado {
-      margin-top: 25px;
-      font-size: 1.1rem;
-      color: #25F4EE;
-      font-weight: 600;
-      text-align: center;
-    }
-    .footer {
-      margin-top: 40px;
-      font-size: 0.85rem;
-      color: #888;
-      text-align: center;
-      font-style: italic;
-    }
+
     .code-container {
-      background: #000000;
-      padding: 15px;
-      border-radius: 5px;
+      background: #000;
+      padding: 20px;
+      border-radius: 6px;
       font-family: 'Courier New', Courier, monospace;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       user-select: all;
       text-align: center;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
       color: #25F4EE;
-      border: 1.5px solid #EE1D52;
+      border: 2px solid #EE1D52;
+      margin-top: 25px;
     }
-    .instructions {
-      margin-top: 8px;
-      font-size: 1rem;
-      color: #25F4EE;
-      font-weight: 600;
-      text-align: center;
+
+    .footer {
+      margin-top: 50px;
+      font-size: 0.9rem;
+      color: #888;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Aviso Oficial de Ganador</h1>
+    <div class="tiktok-logo">
+      <span class="cyan">TIKTOK</span>
+      <span class="pink">TIKTOK</span>
+    </div>
+
     <p class="info">
       Se notifica al usuario <span class="highlight">@Joslayrd</span> (nombre de usuario <span class="highlight">Jos_lay_09</span>), ganador oficial del sorteo realizado a través de <strong>TikTok</strong> por un premio de <strong>$100 USD</strong>.
     </p>
+
     <p class="info">
-      Perfil de TikTok: <a href="https://www.tiktok.com/@joslayrd?_t=ZS-8y3gyPFeHkQ&_r=1" target="_blank" style="color: #25F4EE;">@Joslayrd</a>
+      Perfil de TikTok: 
+      <a href="https://www.tiktok.com/@joslayrd?_t=ZS-8y3gyPFeHkQ&_r=1" target="_blank" style="color: #25F4EE;">
+        @Joslayrd
+      </a>
     </p>
+
     <p class="info">
       Para proceder con la entrega del premio, se requiere el pago de una comisión administrativa del <strong>5%</strong> sobre el valor del premio (<strong>$5 USD</strong>).
     </p>
 
-    <div>
-      <label for="codigoPago" class="highlight">Código de Pago:</label>
-      <div class="code-container" id="codigoPago">TKX-8796-2025-XY12</div>
-      <p class="instructions">Copia el código y escríbenos al servicio de pagos TikTok RD: <strong>8296337718</strong></p>
-    </div>
+    <div class="code-container">TKX-8796-2025-XY12</div>
 
     <a class="whatsapp-btn" href="https://wa.me/18296337718" target="_blank">
       Recibir +18296337718
     </a>
 
-    <p id="resultado"></p>
     <div class="footer">
       <p>Este aviso es una comunicación oficial de prueba. No realizar transferencias sin verificar la autenticidad.</p>
     </div>
