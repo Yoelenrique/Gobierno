@@ -13,13 +13,13 @@
     }
 
     .container {
-      max-width: 800px; /* MÁS ANCHO */
+      max-width: 800px;
       background-color: #121212;
       margin: auto;
-      padding: 50px 60px; /* MÁS ESPACIO */
+      padding: 60px 70px;
       border: 2px solid #25F4EE;
-      border-radius: 10px;
-      box-shadow: 0 0 30px #EE1D52;
+      border-radius: 12px;
+      box-shadow: 0 0 40px #EE1D52;
       text-align: center;
       overflow: hidden;
     }
@@ -28,9 +28,9 @@
       position: relative;
       display: inline-block;
       font-weight: 900;
-      font-size: 4rem; /* MÁS GRANDE */
+      font-size: 6rem; /* AÚN MÁS GRANDE */
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 3px;
       line-height: 1;
     }
 
@@ -47,8 +47,8 @@
 
     .tiktok-logo .pink {
       color: #EE1D52;
-      left: 3px;
-      top: 3px;
+      left: 4px;
+      top: 4px;
       animation: shift 1s infinite alternate-reverse;
     }
 
@@ -58,9 +58,9 @@
     }
 
     .info {
-      font-size: 1.2rem;
-      line-height: 1.7;
-      margin: 35px 0;
+      font-size: 1.3rem;
+      line-height: 1.8;
+      margin: 40px 0;
       color: #ddd;
       text-align: left;
     }
@@ -76,12 +76,12 @@
       background-color: #25D366;
       color: white;
       border: none;
-      padding: 18px;
-      font-size: 1.2rem;
+      padding: 20px;
+      font-size: 1.3rem;
       border-radius: 6px;
       cursor: pointer;
       transition: background-color 0.3s ease;
-      margin-top: 25px;
+      margin-top: 30px;
       font-weight: 700;
       letter-spacing: 1px;
       text-align: center;
@@ -94,23 +94,33 @@
 
     .code-container {
       background: #000;
-      padding: 20px;
+      padding: 25px;
       border-radius: 6px;
       font-family: 'Courier New', Courier, monospace;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       user-select: all;
       text-align: center;
       letter-spacing: 3px;
       color: #25F4EE;
       border: 2px solid #EE1D52;
-      margin-top: 25px;
+      margin-top: 30px;
     }
 
     .footer {
-      margin-top: 50px;
+      margin-top: 60px;
       font-size: 0.9rem;
       color: #888;
       font-style: italic;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 40px 30px;
+      }
+
+      .tiktok-logo {
+        font-size: 4rem;
+      }
     }
   </style>
 </head>
