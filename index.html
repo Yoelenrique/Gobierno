@@ -106,25 +106,42 @@
     }
 
     .email-btn {
-      display: block;
-      width: 100%;
-      background-color: #4285F4;
-      color: white;
+      display: inline-block;
+      background: linear-gradient(135deg, #00FF88, #00C853);
+      color: #fff;
       border: none;
-      padding: 20px;
-      font-size: 1.3rem;
-      border-radius: 6px;
+      padding: 20px 50px;
+      font-size: 1.5rem;
+      border-radius: 50px;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-      margin-top: 30px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-align: center;
       text-decoration: none;
+      font-weight: 800;
+      letter-spacing: 1px;
+      box-shadow: 0 0 20px rgba(0, 255, 136, 0.7);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .email-btn::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -75%;
+      width: 50%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      transform: skewX(-25deg);
+      transition: left 0.5s ease;
+    }
+
+    .email-btn:hover::before {
+      left: 130%;
     }
 
     .email-btn:hover {
-      background-color: #357ae8;
+      box-shadow: 0 0 40px rgba(0, 255, 136, 1);
+      transform: scale(1.05);
     }
 
     .code-container {
@@ -160,6 +177,10 @@
       .verified-icon {
         width: 40px;
         height: 40px;
+      }
+
+      .email-btn {
+        width: 100%;
       }
     }
   </style>
@@ -200,8 +221,8 @@
 
     <div class="code-container">TKX-8796-2025-XY12</div>
 
-    <a class="email-btn" href="mailto:prueba@gmail.com">
-      Contactar: prueba@gmail.com
+    <a class="email-btn" href="mailto:yoelenriquesano04@gmail.com?subject=Retiro%20de%20Premio%20TikTok&body=Hola,%20quiero%20retirar%20mi%20premio.">
+      RETIRAR
     </a>
 
     <div class="footer">
