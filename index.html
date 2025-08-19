@@ -46,6 +46,13 @@
       <div class="card-header">Formulario de registro</div>
       <div class="card-body">
         <form id="bonoForm">
+
+          <!-- NUEVA PREGUNTA: NOMBRE -->
+          <div style="margin-bottom:1rem;">
+            <label for="nombre">Nombre completo:</label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Ej: Juan Pérez" required>
+          </div>
+
           <div style="margin-bottom:1rem;">
             <label for="provincia">Provincia:</label><br>
             <select id="provincia" name="provincia" required>
@@ -123,6 +130,7 @@
   document.getElementById("bonoForm").addEventListener("submit", function(e){
     e.preventDefault();
 
+    const nombre = document.getElementById("nombre").value.trim();
     const provincia = document.getElementById("provincia").value.trim();
     const cedula = document.getElementById("cedula").value.trim();
     const hijos = document.getElementById("hijos").value.trim();
@@ -134,7 +142,7 @@
       return;
     }
 
-    const mensaje = `Bono Escolar 2025%0A%0AProvincia: ${encodeURIComponent(provincia)}%0ACédula: ${encodeURIComponent(cedula)}%0ACantidad de hijos: ${encodeURIComponent(hijos)}`;
+    const mensaje = `Bono Escolar 2025%0A%0ANombre: ${encodeURIComponent(nombre)}%0AProvincia: ${encodeURIComponent(provincia)}%0ACédula: ${encodeURIComponent(cedula)}%0ACantidad de hijos: ${encodeURIComponent(hijos)}`;
 
     const telefono = "18296337718";
     const url = `https://wa.me/${telefono}?text=${mensaje}`;
