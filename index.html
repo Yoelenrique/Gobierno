@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aviso informativo — Bono Escolar RD$3,500</title>
+  <title>Bono Escolar RD$3,500</title>
   <meta name="robots" content="noindex,nofollow" />
   <style>
     :root{
@@ -12,188 +12,136 @@
       --gris-card:#ffffff;
       --gris-suave:#f0f2f5;
       --texto:#222;
-      --azul-rd:#002d62;
-      --rojo-rd:#ce1126;
-      --blanco:#ffffff;
       --verde:#0a7a2e;
     }
     *{box-sizing:border-box;margin:0;padding:0}
-
-    body { 
-      font-family: Georgia, "Times New Roman", serif; 
-      background-color: var(--gris-fondo); 
-      color: var(--texto); 
-      line-height: 1.6; 
-      font-size: 1rem;
-    }
-
+    body { font-family: Georgia, "Times New Roman", serif; background-color: var(--gris-fondo); color: var(--texto); line-height: 1.6; font-size: 1rem; }
     header { background-color: var(--azul); color: white; padding: 1.2rem 1rem; }
     .header-wrap{ max-width:1100px; margin:0 auto; display:flex; align-items:center; gap:1.2rem; }
     .title{ font-weight:700; font-size:1.4rem; line-height:1.3; letter-spacing:0.5px }
-    .subtitle{ font-size:1rem; opacity:.85 }
-
-    /* Bandera RD */
-    .flag-dr {
-      width: 96px; height: 60px;
-      position: relative;
-      border: 1px solid rgba(255,255,255,.6);
-      background: var(--blanco);
-      box-shadow: 0 1px 2px rgba(0,0,0,.15);
-      border-radius: 2px;
-      flex: 0 0 auto;
-      overflow: hidden;
-    }
-    .flag-dr .q { position: absolute; width: 50%; height: 50%; }
-    .flag-dr .tl { left: 0; top: 0; background: var(--azul-rd); }
-    .flag-dr .tr { right: 0; top: 0; background: var(--rojo-rd); }
-    .flag-dr .bl { left: 0; bottom: 0; background: var(--rojo-rd); }
-    .flag-dr .br { right: 0; bottom: 0; background: var(--azul-rd); }
-    .flag-dr::before {
-      content: "";
-      position: absolute;
-      left: 0; right: 0;
-      top: 50%; height: 10px;
-      background: var(--blanco);
-      transform: translateY(-50%);
-    }
-    .flag-dr::after {
-      content: "";
-      position: absolute;
-      top: 0; bottom: 0;
-      left: 50%; width: 10px;
-      background: var(--blanco);
-      transform: translateX(-50%);
-    }
-    .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0 }
-
+    .resaltado-verde{ color: var(--verde); font-weight: bold; }
     .container { max-width: 1100px; margin: 2.5rem auto; padding: 0 1.5rem; }
-
-    /* AVISO */
-    .aviso { 
-      background: var(--gris-card); 
-      border: 1px solid var(--gris-borde); 
-      border-left: 6px solid var(--azul); 
-      padding: 1.75rem 1.5rem; 
-      border-radius: 5px; 
-      box-shadow: 0 2px 6px rgba(0,0,0,.08); 
-    }
-    .aviso h2 { margin: 0 0 .5rem 0; font-size: 1.25rem; }
-    .aviso small { color:#555 }
-    .aviso p { margin:1rem 0; font-size:1rem; }
-    .aviso ul { margin:1rem 0 0 1.5rem; line-height:1.6 }
-    .aviso li { margin-bottom:.6rem }
-
-    .grid { display: grid; grid-template-columns: 2fr 1fr; gap: 1.8rem; margin-top:2rem }
-    @media(max-width: 900px) { .grid { grid-template-columns: 1fr; } }
-
-    .card { 
-      background: var(--gris-card); 
-      border: 1px solid var(--gris-borde); 
-      border-radius: 5px; 
-      box-shadow: 0 2px 6px rgba(0,0,0,0.07); 
-    }
+    .card { background: var(--gris-card); border: 1px solid var(--gris-borde); border-radius: 5px; box-shadow: 0 2px 6px rgba(0,0,0,0.07); }
     .card-header { padding: 1rem 1.25rem; border-bottom: 1px solid var(--gris-borde); font-weight: bold; background: var(--gris-suave); font-size:1.05rem }
     .card-body { padding: 1.25rem; font-size: 1rem; line-height:1.65 }
-
-    footer { 
-      background: var(--gris-suave); 
-      color: #444; 
-      text-align: center; 
-      padding: 1.2rem; 
-      margin-top: 2.5rem; 
-      font-size: 0.9rem; 
-      border-top:1px solid var(--gris-borde); 
-      line-height:1.5 
-    }
-
-    /* Resaltado en verde */
-    .resaltado-verde {
-      color: var(--verde);
-      font-weight: bold;
-    }
-
-    /* Botón WhatsApp flotante */
-    .btn-whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25d366;
-      color: white;
-      font-weight: bold;
-      text-align: center;
-      padding: 1rem 1.4rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-size: 1.1rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      z-index: 1000;
-      transition: transform 0.2s, background 0.3s;
-    }
-    .btn-whatsapp:hover {
-      background: #1ebc59;
-      transform: scale(1.05);
-    }
-    .btn-whatsapp svg {
-      width: 22px;
-      height: 22px;
-      fill: white;
-    }
+    footer { background: var(--gris-suave); color: #444; text-align: center; padding: 1.2rem; margin-top: 2.5rem; font-size: 0.9rem; border-top:1px solid var(--gris-borde); line-height:1.5 }
+    button { background:var(--azul); color:white; padding:.7rem 1.2rem; border:none; border-radius:4px; cursor:pointer; font-weight:bold; }
+    button:hover { background:#00264d; }
+    input, select { width:100%; padding:.6rem; border:1px solid #ccc; border-radius:4px; }
+    label { font-weight:bold; }
   </style>
 </head>
 <body>
   <header>
     <div class="header-wrap">
-      <div class="flag-dr" role="img" aria-label="Bandera de la República Dominicana (estilizada, sin escudo)">
-        <span class="sr-only">Bandera de la República Dominicana (estilizada, sin escudo)</span>
-        <div class="q tl"></div>
-        <div class="q tr"></div>
-        <div class="q bl"></div>
-        <div class="q br"></div>
-      </div>
       <div>
-        <div class="title">Aviso informativo — Bono Escolar <span class="resaltado-verde">RD$3,500</span></div>
+        <div class="title">Bono Escolar <span class="resaltado-verde">RD$3,500</span></div>
       </div>
     </div>
   </header>
 
   <main class="container">
-    <section class="aviso" aria-labelledby="aviso-titulo">
-      <h2 id="aviso-titulo">Aviso a la ciudadanía</h2>
-      <small>Fecha de publicación: <time>2025-08-19</time></small>
-      <p>
-        Este aviso ofrece información general sobre el alcance del bono escolar de <span class="resaltado-verde">RD$3,500</span> en cuanto a útiles y uniformes, a modo orientativo. Los montos y condiciones pueden variar según proveedores y listas de materiales solicitadas por cada centro educativo.
-      </p>
-      <ul>
-        <li>Puede cubrir un uniforme básico (pantalón/falda y camisa) y parte de los útiles esenciales.</li>
-        <li>Priorice cuadernos, lápices o lapiceros, borrador, sacapuntas, regla, mochila resistente y calzado escolar.</li>
-        <li>Conserve sus facturas y compare precios entre establecimientos.</li>
-        <li>Para confirmar programas o ayudas vigentes, consulte directamente los portales y canales oficiales del Gobierno dominicano.</li>
-      </ul>
-    </section>
+    <!-- Formulario -->
+    <div class="card">
+      <div class="card-header">Formulario de registro</div>
+      <div class="card-body">
+        <form id="bonoForm">
+          <div style="margin-bottom:1rem;">
+            <label for="provincia">Provincia:</label><br>
+            <select id="provincia" name="provincia" required>
+              <option value="">Seleccione su provincia</option>
+              <option>Azua</option>
+              <option>Bahoruco</option>
+              <option>Barahona</option>
+              <option>Dajabón</option>
+              <option>Distrito Nacional</option>
+              <option>Duarte</option>
+              <option>Elías Piña</option>
+              <option>El Seibo</option>
+              <option>Espaillat</option>
+              <option>Hato Mayor</option>
+              <option>Hermanas Mirabal</option>
+              <option>Independencia</option>
+              <option>La Altagracia</option>
+              <option>La Romana</option>
+              <option>La Vega</option>
+              <option>María Trinidad Sánchez</option>
+              <option>Monseñor Nouel</option>
+              <option>Monte Cristi</option>
+              <option>Monte Plata</option>
+              <option>Pedernales</option>
+              <option>Peravia</option>
+              <option>Puerto Plata</option>
+              <option>Samaná</option>
+              <option>Sánchez Ramírez</option>
+              <option>San Cristóbal</option>
+              <option>San José de Ocoa</option>
+              <option>San Juan</option>
+              <option>San Pedro de Macorís</option>
+              <option>Santiago</option>
+              <option>Santiago Rodríguez</option>
+              <option>Santo Domingo</option>
+              <option>Valverde</option>
+            </select>
+          </div>
 
-    <section class="grid" aria-label="Sección de apoyo">
-      <div class="card">
-        <div class="card-header">Información adicional</div>
-        <div class="card-body">
-          <p>Si ha escuchado declaraciones o anuncios en medios, verifique siempre en las fuentes oficiales antes de compartir sus datos personales o realizar pagos.</p>
-          <p>Ante dudas, contacte a su centro educativo o a las entidades correspondientes.</p>
-        </div>
+          <div style="margin-bottom:1rem;">
+            <label for="cedula">Número de cédula:</label><br>
+            <input type="text" id="cedula" name="cedula" maxlength="11" minlength="11"
+                   placeholder="Ej: 00112345678" required>
+            <small style="color:#555;">Debe tener exactamente 11 dígitos.</small>
+          </div>
+
+          <div style="margin-bottom:1rem;">
+            <label for="hijos">Cantidad de hijos: <span id="hijosVal">3</span></label><br>
+            <input type="range" id="hijos" name="hijos" min="1" max="5" value="3" step="1">
+          </div>
+
+          <button type="submit">Enviar</button>
+        </form>
+
+        <!-- Mensaje de éxito oculto -->
+        <p id="successMsg" style="display:none; margin-top:1rem; color:var(--verde); font-weight:bold;">
+          ✅ Formulario enviado correctamente. Se ha abierto WhatsApp para completar el proceso.
+        </p>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer>
     Este es un portal con fines educativos. © 2025
   </footer>
 
-  <!-- Botón flotante de WhatsApp -->
-  <a class="btn-whatsapp" href="https://wa.me/18296337718?text=Bono%20escolar%202025" target="_blank" rel="noopener">
-    <!-- Ícono SVG de WhatsApp -->
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M16 .3C7.3.3.2 7.4.2 16.1c0 2.8.7 5.4 2 7.7L.3 32l8.4-2.2c2.2 1.2 4.7 1.9 7.3 1.9 8.7 0 15.8-7.1 15.8-15.8S24.7.3 16 .3zm0 28.8c-2.3 0-4.5-.6-6.5-1.8l-.5-.3-5 1.3 1.3-4.9-.3-.5c-1.2-2-1.8-4.3-1.8-6.6 0-7 5.7-12.7 12.7-12.7s12.7 5.7 12.7 12.7-5.7 12.8-12.6 12.8zm7.1-9.6c-.4-.2-2.3-1.1-2.7-1.2-.4-.2-.6-.2-.9.2-.3.4-1 1.2-1.2 1.4-.2.2-.5.3-.9.1s-1.7-.6-3.3-2c-1.2-1.1-2-2.3-2.3-2.7s0-.6.2-.8c.2-.2.4-.5.6-.7.2-.2.3-.4.5-.6.2-.2.3-.4.5-.6.2-.2.3-.5.1-.8-.2-.4-.9-2.2-1.2-3-.3-.8-.7-.7-1-.7h-.9c-.3 0-.8.1-1.2.6s-1.6 1.5-1.6 3.6 1.6 4.1 1.8 4.4c.2.3 3.1 4.8 7.6 6.6 4.6 1.8 4.6 1.2 5.4 1.2.8 0 2.7-1.1 3.1-2.2.4-1.1.4-2 .3-2.2-.2-.3-.4-.4-.9-.6z"/></svg>
-    Calificar
-  </a>
+  <script>
+  // Mostrar valor del slider en tiempo real
+  const hijosInput = document.getElementById("hijos");
+  const hijosVal = document.getElementById("hijosVal");
+  hijosInput.addEventListener("input", function(){
+    hijosVal.textContent = hijosInput.value;
+  });
+
+  document.getElementById("bonoForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const provincia = document.getElementById("provincia").value.trim();
+    const cedula = document.getElementById("cedula").value.trim();
+    const hijos = document.getElementById("hijos").value.trim();
+    const successMsg = document.getElementById("successMsg");
+
+    const cedulaRegex = /^[0-9]{11}$/;
+    if(!cedulaRegex.test(cedula)){
+      alert("La cédula debe tener exactamente 11 dígitos numéricos.");
+      return;
+    }
+
+    const mensaje = `Bono Escolar 2025%0A%0AProvincia: ${encodeURIComponent(provincia)}%0ACédula: ${encodeURIComponent(cedula)}%0ACantidad de hijos: ${encodeURIComponent(hijos)}`;
+
+    const telefono = "18296337718";
+    const url = `https://wa.me/${telefono}?text=${mensaje}`;
+    window.open(url, "_blank");
+
+    successMsg.style.display = "block";
+  });
+  </script>
 </body>
 </html>
